@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        /* pour les fonctions mettre une variable ou une constante 
+        puis déterminer une fonctions */
+
+        let phrase = "Une phrase bien écrite est celle dont on ne saurait enlever une syllabe sans fausser la mesure de la phrase."
+
+        let mots = phrase.toLowerCase().split(" ")/* phrase.toLowerCase() suppression des majuscules*/
+        let compteur = {}
+        for (let i = 0; i < mots.length; i++) {
+            let mot = mots[i]
+            if (compteur[mot] === undefined) {
+                compteur[mot] = 1
+            } else { compteur[mot]++ }
+        }
+        console.log(compteur)
+
+
+
+
+    </script>
+    <title>fonctions</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
