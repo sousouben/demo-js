@@ -1,15 +1,17 @@
 let form = document.querySelector('#loginForm');//la variable from va attraper l'id loginForm
 
-console.log(form.email);
+console.log(form);
 
 //ecouter la modification de l'email
 form.email.addEventListener('change', function(){
     validEmail(this);
+
 });
 
 //ecouter la modification du mot de passe
 form.password.addEventListener('change', function(){
     validPassword(this);
+    
 });
 
 //ecouter la soumission du formulaire'
@@ -24,6 +26,7 @@ form.addEventListener('submit', function(e){
 
 const validEmail=function(inputEmail){
     //création de la regExp pour la validation d'email
+    
     let emailRegExp= new RegExp('^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$', 'g');
     //^ signifi le début du texte on a le droit au lettre minucule de a-z et majuscule de A-Z 
     //puis les chiffres 0 à 9 puis les caractére speciaux. pour le début de l'adresse mail.[a-zA-Z0-9.-_]+
@@ -36,6 +39,7 @@ const validEmail=function(inputEmail){
 
     // récupréation balise small
     let small= inputEmail.nextElementSibling;
+    console.log(small);
 
     //on test l'expression régulière
     if(emailRegExp.test(inputEmail.value)){
