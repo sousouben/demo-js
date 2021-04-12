@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>les onglet</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        #tabs .tab-titles{
+            margin-bottom: 0.3rem;
+        }
+
+        #tabs .tab-titles li{
+            display: inline-block;
+            background-color: chocolate;
+            padding: 0.4rem 0.6rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #tabs .tab-titles li.active, 
+        #tabs .tab-titles li:hover{
+            background-color: black;
+            color:white;
+            cursor: pointer;
+        }
+
+        #tabs > div{
+            display: none;
+        }
+
+        #tabs > div.active{
+            display: block;
+            box-shadow: 0 0 2px black;
+            padding: 1rem 2rem;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Les onglet</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9 mt-5">
+                <div id="tabs">
+                    <ul class="tab-titles">
+                        <li data-tabtitle="0" class="active">Titre 1</li>
+                        <li data-tabtitle="1" >Titre 2</li>
+                        <li data-tabtitle="2" >Titre 3</li>
+                    </ul>
+                    <div id="tab0" class="active">
+                        <p>Text 1 : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita perferendis vel
+                            itaque sed repudiandae, commodi exercitationem mollitia, tempore minima alias neque, aliquam
+                            quia molestias ad delectus sunt suscipit quo magni?</p>
+                    </div>
+                    <div id="tab1">
+                        <p>Text 2 : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias quidem nihil vel
+                            vitae reprehenderit. Maiores, natus ipsum aliquid magni consequuntur, perspiciatis, est
+                            repudiandae incidunt doloribus fuga praesentium labore! Suscipit, eligendi.</p>
+                    </div>
+                    <div id="tab2">
+                        <p>Text 3 : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsa dicta,
+                            aperiam facilis sint dolor doloribus accusamus ipsum. Similique molestias officiis labore
+                            vero quae consequatur esse at soluta, unde distinctio!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+
+</html>
