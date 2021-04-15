@@ -1,3 +1,44 @@
 body{
-    background-color: lightblue;
+    background-image: url('image/nuage.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    }
+    
+.box-container{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+
+#city{
+    background-color: rgb(39, 119, 224);
+    opacity: 0.5;
+}
+
+#temp{
+    background-color: cadetblue;
+    opacity: 0.5;
+}
+
+#humidity{
+    background-color: darkcyan;
+    opacity: 0.5;
+}
+
+#wind{
+    background-color: darkolivegreen;
+    opacity: 0.5;
 }
